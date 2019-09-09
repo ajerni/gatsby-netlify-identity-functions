@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import IdentityModal from "react-netlify-identity-widget"
@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => {
       </div>
       <IdentityModal
         showDialog={showDialog}
-        onCloseDialog={() => setShowDialog(false)}
+        onCloseDialog={() => {setShowDialog(false); navigate("/page-2/")}}
       />
     </header>
   )
